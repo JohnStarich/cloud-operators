@@ -21,6 +21,7 @@ jobs:
         apt:
           packages:
           - python3-pip
+          - python3-setuptools
     - name: Release
       stage: release
       script: make -e RELEASE_VERSION="${TRAVIS_TAG/v}" release
