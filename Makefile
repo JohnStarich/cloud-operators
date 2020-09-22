@@ -191,10 +191,10 @@ validate-release: verify-operator-meta docker-build kubeval
 .PHONY: operator-courier
 operator-courier:
 	@if ! which operator-courier; then \
-		if which pip; then \
-			pip install operator-courier; \
-		else \
+		if which pip3; then \
 			pip3 install operator-courier; \
+		else \
+			pip install operator-courier; \
 		fi; \
 	fi
 
