@@ -195,7 +195,7 @@ operator-courier:
 			pip install operator-courier; \
 		else \
 			pip3 install operator-courier; \
-		fi
+		fi; \
 	fi
 
 .PHONY: verify-operator-meta
