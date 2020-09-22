@@ -17,6 +17,10 @@ jobs:
       script: make test-e2e
     - name: Release Validation
       script: make validate-release RELEASE_VERSION=0.2.0  # Fake version, just used for quick validation
+      addons:
+        apt:
+          packages:
+          - pip3
     - name: Release
       stage: release
       script: make -e RELEASE_VERSION="${TRAVIS_TAG/v}" release
